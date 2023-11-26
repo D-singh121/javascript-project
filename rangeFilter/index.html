@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="inputArea">
+      <input
+        placeholder=""
+        id="inputSlider"
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+      />
+      <label id="" class="left-lebal" for="">0</label>
+      <label id="label" class="right-lebal" for="">100</label>
+
+      <script>
+        var Slider = document.querySelector("#inputSlider");
+        var labelValue = document.querySelector("#label");
+
+        label.innerHTML = Slider.value;
+
+        Slider.style.background = "linear-gradient(90deg, yellow  , white 0%)";
+
+        inputSlider.oninput = function () {
+          labelValue.innerHTML = inputSlider.value;
+          inputSlider.style.background =
+            "linear-gradient(90deg, yellow " +
+            inputSlider.value +
+            "%  , white 0%)";
+        };
+      </script>
+    </div>
+  </body>
+</html>

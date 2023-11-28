@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1.arrow function don't have argument object. -->
+    <!-- 2. regular function are constructable but not arrow function. -->
+    <!-- 3. arrow function don't have this keyword -->
+    <!-- 4. implecit return  -->
+    <script>
+      // <!-- 1.arrow function don't have argument object. -->
+      //   function hello(x, y) {
+      //     console.log(arguments);
+      //     return x + y;
+      //   }
+      //   hello(2, 5);
+
+      //   hi = (m, n) => {
+      //     console.log(arguments);
+      //     return m + n;
+      //   };
+      //   hi();
+
+      // <!-- 2. regular function are constructable but not arrow function. -->
+
+      /*function car(name) {
+          this.brand = name;
+        }
+        let carData = new car("hero");
+        console.log(carData);
+        /////////////
+
+        const truck = (name) => {
+          this.brand = name;
+        };
+
+        let truckData = new truck("tata");
+        console.log(truckData);*/
+
+      // <!-- 3. arrow function don't have this keyword -->
+      /*let userInfo = {
+        name: "car bike",
+        fullname() {
+          console.log(this.name + "first func");
+        },
+        fullname2: () => {
+          console.log(this.name + "arrow func");
+        },
+      };
+      userInfo.fullname();
+	  */
+      // output of normal function will come but not in arrow function;
+
+      // <!-- 4. implecit return  -->
+      function hello() {
+        100;
+      }
+      console.log(hello());
+
+	  const hello2 =() => 100 // we can declare in single line
+	  console.log(hello2());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Weather App</title>
+	<link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+	<div class="card">
+		<div class="upper_header">
+			<input type="text" placeholder="Type city name  " />
+			<button>
+				<img class="img" src="./weather-app-images/search.png" alt=" search logo" />
+			</button>
+		</div>
+
+		<div class="weather">
+			<img class="weather-icon" src="./weather-app-images/rain.png" alt="weather image" />
+			<h1>22°C</h1>
+			<h2>India</h2>
+			<div class="details">
+				<div class="col">
+					<img src="./weather-app-images/humidity.png" alt="img" />
+					<div>
+						<p class="humidity">50%</p>
+						<p>Humidity</p>
+					</div>
+				</div>
+
+				<div class="col">
+					<img src="./weather-app-images/wind.png" alt="wind" />
+					<div>
+						<p class="wind">60 km/h</p>
+						<p>Wind Speed</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const apiKey = "da10a52784206b863c31c8dbf0af85ce"
+		const apiUrl = " https://api.openweathermap.org/data/2.5/weather?units=metric&q= bangalore";
+	</script>
+	<script src="./index.js"></script>
+</body>
+
+</html>

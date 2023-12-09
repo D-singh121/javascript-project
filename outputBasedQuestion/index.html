@@ -1,0 +1,870 @@
+//*********************** 1 *********************** */
+<script>
+	// let a = []
+	// let b = [];
+	// console.log(a==b);
+	// console.table(a===b);
+	// //o/p: false false ----------> memory location compare hogi not actual array.
+</script>
+
+//*********************** 2 *********************** */
+<script>
+	// let a = [];
+	// let b = a
+	// console.log(a==b);
+	// console.table(a===b);
+	// // o/p:- true true
+	// // we are just assingning the memory adderess of arrray a to the b variable.
+</script>
+
+
+//************************ 3 ********************** */
+<script>
+	// let a = [20];
+	// let b = [20];
+	// // let b = ["20"];
+	// console.log(a[0] == b[0]);
+	// console.table(a[0] === b[0]); //**** "===" oprator me variable ka type bhi check hota hai */
+	// //o/p:- true true
+	// // we are comparing the 0th index of array "a" with array of "b"; value are same at the index position thats why answer
+	// // is true true
+</script>
+
+
+//************************* 4 ********************* */
+<script>
+	// let z = [1, 2, 3, 4]
+	// let a = { name: "dee" };//--- this is for confusing.
+	// console.log(...z,);
+
+	// // o/p:- 1 2 3 4
+	// //** hum jab bhi "..." ye three dot jise spread oprator kahte hai use karte hai to ye variable ko destructure kar deta
+	// // hai */
+</script>
+
+
+//************************* 5 ********************* */
+<script>
+	// console.log(typeof NaN);//----> agar hum kisi string ko number se divide karte hai to ye NaN throw karega because
+	// // -String can't be devide by a number.
+
+	// // o/p:- number
+	// //*** just because Nan is also a nunmber type */
+</script>
+
+
+//************************* 6 ********************* */
+<script>
+	// let data = 10 - -10;
+	// console.log(data);
+
+	// // o/p:- 20
+	// //**** because of mathematical login " - - = + " if there is 2 minus at the same time then it will converted to + */
+</script>
+
+
+//************************* 7 ********************* */
+<script>
+	// const set = new Set([1, 1, 2, 3, 3, 4, 5, 5]); //-----> Set() method duplicate array element ko remove karke ek new
+	// // object return kar deta hai * /
+	// console.log(set);
+	// // o/p: Set(5) { 1, 2, 3, 4, 5 }
+</script>
+
+
+//************************* 8 ********************* */
+<script>
+	// let data = { name: "devesh" };
+	// console.log(delete data.name); //-----> delete method simply object me se data ko delete kar dega .
+	// console.table(data); //------> delete karne ke baad agar hum object variable ko check karte hai to ye blank return
+	// // karta hai.
+
+	// // o/p:- true
+	// // delete method simply object me se data ko delete kar dega aur delete success hua to ye true return karega nahi to
+	// // false return karega */
+</script>
+
+
+//************************* 9 ********************* */
+<script>
+	// let data = { name: "devesh" };
+	// console.log(delete data);
+	// // o/p:- false
+	// //-----> hum iss tarah se data ko delete nahi kar sakte hai .not allowed.
+	// console.table(data)
+</script>
+
+
+//************************* 10 ************************************** */
+<script>
+	// const data = ["devesh","ram" ,"sitaram","krishna"];
+
+	// const [y] = data; //----> first index position ko return karega
+	// console.log(y);
+	// //--o/p:- devesh
+
+	// const [l ,z] = data; //---> behave like useState of react
+	// console.log(l,z);
+	// //---> o/p-> devesh ramWW
+
+	// const [,z] = data; //---> agar hume kisi perticular index ki value chahiye to hume bas " ," ka use karna hai.
+	// console.log( z);
+	//---> because jab bhi hum kisi array ko kisi object me asign karte hai to vo uske array index ko return karta hai
+</script>
+
+//************************* 11 ***************************************** */
+<script>
+	// //-----> How to access "age " property without .dot oprator
+	// let data = { name: "devesh", age: 24, skill: "devloper" };
+	// const { skill } = data; //----> solved using object destructuring.
+	// console.log(skill);
+	// //-o/p:- devloper
+</script>
+
+
+//************************* 12 ***************************************** */
+<script>
+	// //----------> How to merge two object--------<
+	// const data = { name: "devesh", age: 24, skill: "devloper" }; //
+	// const info = { city: "Noida", mail: "test@mail" }
+	// let merge = { ...data, ...info }; //----- solved using spread oprator //
+	// console.table(merge);
+	// console.log(merge);
+	// //o/p:- { name: 'devesh' ,age: 24, skill: 'devloper', city: 'Noida', mail: 'test@mail' } 
+
+</script>
+
+
+//************************* 13 **************************************** */ //
+<script>
+	// const data = { name: "devesh", age: 24, skill: "devloper" };
+	// const info={city: "Noida" , skill: "devops" }
+	// let merge = { ...data, ...info } //----> if any conflicts value come then the value from the rightmost object (in this
+	// // case, info) takes precedence.
+	// console.log(merge);
+	// //o/p:- { name: 'devesh', age: 24, skill: 'devops', city: 'Noida' }
+</script>
+
+//************************* 14 **************************************** */
+<script>
+	// const myName = "Devesh";
+	// console.log(myName());
+	// //o/p:- error--> myName is not a function
+</script>
+
+//************************* 15 **************************************** */
+<script>
+	// const result = false || {} || null;
+	// //-----> this will check like this way
+	// /*
+	// if({}){
+	// console.log(result); //---> agar argument me value false hai to excution yaha tak aayega hi nahi.
+	// }
+	// //--> isi tarah fir " {} " check hoga then " null " aur agar koi positive value milti hai to use return kar dega.
+	// */
+	// console.warn(result);
+	// //o/p:- {}
+	// //-----> because hum jab bhi "OR" oprator ka use karte hai to ye sirf first positive value ko hi return karta
+	// // hai.in this case first positive value is "{}".
+</script>
+
+//************************* 16 **************************************** */
+<script>
+	// const result = "" || {} || null;
+	// console.log(result);
+	// //--> o/p-> {}
+</script>
+
+//************************* 17 **************************************** */
+<script>
+	// const result = [] || 0 || true;
+	// console.log(result);
+	// //--> o/p-> [] positive value contain
+</script>
+
+//************************* 18 **************************************** */
+<script>
+	// const result = null || false || "";
+	// console.warn(result);
+	// //--> o/p-> false  ; initial empty string does'nt contain any positive or nagetive value
+</script>
+
+//************************* 19 **************************************** */
+<script>
+	// const result = null || "" || false ; //---> agar sabhi value nagative hai to fir last wala value consider hoga.
+	// console.warn(result);
+	// // //--> o/p-> "" initial empty string does'nt contain any positive or nagetive value
+</script>
+
+//************************* 20 **************************************** */
+<script>
+	// console.log(Promise.resolve(6));
+	// //--->o/p:-  Promise {<fulfilled>: 6}
+	// //When we pass a non-promise value to Promise.resolve(), it returns a resolved promise with that value. In this case, 6 is a non-promise value, so Promise.resolve(6) creates a resolved promise with the value 6.
+
+</script>
+
+//************************* 21 **************************************** */
+<script>
+	// console.log("❤️"==="❤️");
+	// //opt:- true
+	// //--- yaha pe emoji ke unicode compare ho rahe hai na ki actual emoji logo to agar same emoji honge to same unicode hoga isliye true return karega; 
+
+</script>
+
+//************************* 22 **************************************** */
+<script>
+	// JSON.parse();
+	// //-->. what this method will do ?
+	// //o/p:- parses JSON to a Javascript value;
+</script>
+
+//************************* 23 **************************************** */
+<script>
+	// var name = "devesh"; //---> distraction
+	// function getNames() {
+	// 	console.log(name); //kisi bhi variable ko initialize karne se pahle nahi use kar sakte hai ,simply called hoisting is not supported with "let" and "const" but can be achive by using "var"
+	// 	let name = "Sumit";
+	// }
+	// getNames();
+
+	// //o/p:- error "Cannot access 'name' before initialization"
+</script>
+
+
+//************************* 24 **************************************** */
+<script>
+	// let name = "devesh";
+	// function getNames() {
+	// 	console.log(name);
+	// }
+	// getNames()
+
+	// //opt:- devesh
+	// //----> let is block scope keyword but here name variable is present outside the function but can be access due to laxical scope (child component can access the parent component element)
+
+</script>
+
+
+//************************* 25 **************************************** */
+<script>
+	// console.log(`${(X => X)('I LOVE')} to programe `);
+	// //opt:- I love to programe
+
+</script>
+
+
+//************************* 26 **************************************** */
+<script>
+	// function sumValues(x, y, z) {
+	// 	return x + y + z
+	// }
+
+	// console.log(sumValues(...[1, 2, 3]));
+	// // sumValues([...1, 2, 3]) //--- 1 ko destructure karne ki kosis kar raha hai.
+	// // sumValues([...[1, 2, 3]]) //---- destructure to ho jayega but fir dusre array mefas jayega.
+	// // sumValues(...[1, 2, 3]) //-- this is right because hum complete array ko hi destructure kar rahe hai .
+	// // sumValues([1, 2, 3])
+	// //-- opt--> sumValues(...[1,2,3])
+</script>
+
+//************************* 27 **************************************** */
+<script>
+	// const name = 'dee singh'
+	// console.log(!typeof name === 'object'); //o/p:- false
+	// console.log(!typeof name === 'string'); //o/p:- false
+
+	// // oprator traverse left to right hota hai  to jab hum typeof ko ! lagate hai to vo value ko reverse change kar deta hai (eg.true to false). to string true thi hamari but uska oppsite false ho gya , ab jab bhi kisi object ko false se compare kiya jata hai to value hamesha false hi aati hai. 
+
+</script>
+
+//************************* 28 **************************************** */
+<script>
+	// const name = "dee"
+	// const age = 22
+
+	// console.log(isNaN(name)); //op:- true ,because name is string not number
+	// console.log(isNaN(age)); //op:- false , because age is number.
+
+</script>
+
+//************************* 29 **************************************** */
+<script>
+	// let person = { name: "Dee" };
+	// // what can modify person object
+	// Object.seal(person); //--> ek baar object me seal lagane pe hum usme aur key-value pair add nahi kar sakte hai. but usme present key-pair ko modify kar sakte hai.
+	// console.log(person);
+
+	// //opt:- {name: 'Dee'}
+</script>
+
+
+//************************* 30 **************************************** */
+<script>
+	// let data = [2, 3, 4, 5, 6];
+	// //remove first element of array
+	// data.shift(data) //----> shift will remove first element of array
+	// console.log(data);
+
+	// data.pop(data) //--> last element remove karne ke liye
+	// console.log(data);
+	// //opt:-(4) [2, 3, 4, 5] 
+</script>
+
+//************************* 31 **************************************** */
+<script>
+	// // check odd-even number
+	// let a = 24;
+	// let modulas = (a % 2);
+	// modulas == 0 ? console.log("even number") : console.log("odd number");
+</script>
+
+
+//************************* 32 **************************************** */
+<script>
+	// let data = { name: " Dee singh" };
+	// console.log(delete data.name) //opt:--  true
+	// console.log(data); //opt:- {}
+</script>
+
+
+//************************* 33 **************************************** */
+<script>
+	// let data = "true";
+	// console.log(typeof (data));
+	// // convert data to boolean false value.
+	// //--- oppsite of string can be a boolean value.
+	// console.log((!data)); //opt:- false (boolean)
+</script>
+
+//************************* 34 **************************************** */
+<script>
+	// let data = "true";
+	// // convert data to boolean true value.
+	// console.log(typeof (!!data)); //opt:- true (boolean)
+</script>
+
+//************************* 35 **************************************** */
+<script>
+	// // difference between map and forEach function
+	// map function return always somthig but forEach does not .
+</script>
+
+//************************* 36 **************************************** */
+<script>
+
+	// let data = ["dee", "sam", "sumi", "sufi"];
+	// delete data[1];
+	// console.log(data);
+	// //-- jab bhi koi element delete hoga array me se to vaha pe empty show karega because memory space empty ho jayegi  even null and undefined bhi thodi space cover karte hai.
+	// //opt:- (4) ['dee', empty, 'sumi', 'sufi']
+
+	// // kya uski length me asar padega
+	// // ans-->  nahi because space empty hui hai memory adderess nahi.
+	// console.log(data.length);
+	// //opt:- 4
+</script>
+
+//***************************** 37 **************************************** */
+<script>
+	// //---merge two array
+	// let a = [1, 2, 3, 4]
+	// let b = [5, 6, 7]
+	// let merge = [...a, ...b]
+	// console.log(merge);
+	// //opt:- (7) [1, 2, 3, 4, 5, 6, 7]
+</script>
+
+//***************************** 38 **************************************** */
+<script>
+	// //---merge two array
+	// let a = [1, 2, 3, 6, 4]
+	// let b = [5, 6, 2, 3, 7]
+	// let merge = [...a, ...b]
+	// console.log(merge); // it will print array without sorting .
+	// //opt:- (10) [1, 2, 3, 6, 4, 5, 6, 2, 3, 7]
+</script>
+
+//***************************** 39 **************************************** */
+<script>
+	// let c = 4 ** 4;
+	// console.log(c); // ye power squre me chala jayega eg.(4x4x4x4)
+	// //opt:- 256
+</script>
+
+//***************************** 40 **************************************** */
+<script>
+	// let a = 3; // first this will excute
+	// setTimeout(() => {
+	// 	console.log(a); // at the end this will return  the change value of variable "a"
+	// }, 0)
+	// a = 5; // then second will excute.
+
+	// //opt:- 5 because of excution call stack context .
+</script>
+
+//***************************** 41 **************************************** */
+<script>
+	// const c = 4;
+	// let C = 6;
+	// console.log(c) // In javascript upperCase and LowerCase are treated like uniq variables;
+	// // //opt:- 4
+</script>
+
+//***************************** 42 **************************************** */
+<script>
+	// const C10 = 4;
+	// console.log(C10); // this is allowed
+	// // //opt:- 4
+
+	// let 10C = 6;
+	// console.log(10C); // this is not allowed in JS
+	// // opt:- error ,beacuse hum javascript me variable ko numeric se start nahi kar sakte hai .
+</script>
+
+//***************************** 43 **************************************** */
+<script>
+	// let c = "dee";
+	// let d = `dee`;
+	// console.log(c === d);
+	// //opt:- true , because we comparing the both value of variabl "c" and "d" .
+</script>
+
+//***************************** 44 **************************************** */
+<script>
+	// let d = 1;
+	// let a = 2;
+	// console.log(--a === d); // (1 === 1)
+	// console.log(a); // jab hum variable "a" ki value me "--" oprator use karte hai to a ki value 1 se kam ho jati hai.
+
+	// //opt:- true
+</script>
+
+
+//***************************** 45
+**************************************** */
+<script>
+	// let c = 5;
+	// let b = 5;
+	// let d = 6; // --d = 5
+
+	// console.log(c === b === --d); // this look like this (true === 5)
+	// // opt:- false , because humara comparison left to right chal raha hai to variable "c"aur "b ko compare karne pe hume true milega but jab ye variable "d" ko compare karne jaayega to comparison true and variable "d" ka hoga (true === d), boolean hone ki vajah se ye hume false return karega.
+
+</script>
+
+//***************************** 46 **************************************** */
+<script>
+	// console.log(3 * 3); //opt: 9,
+	// console.log(3 ** 3); // opt: 27
+	// console.log(3***3); //opt:- err , this is not supported.
+</script>
+
+//***************************** 47 **************************************** */
+<script>
+	// console.log(a);
+	// var a; // this will hoisted to the top level but the assignment will remain on the same place thats why output will be "undefind"
+	// var a = 5;
+
+	// // opt:- undefind
+</script>
+
+//***************************** 48 **************************************** */
+<script>
+	// console.log(b); // without declaration of variable;
+	// //opt:- not defind
+
+	// // not defind me hum variable ko declare bhi nahi karte hai but undefind me variable to declare hota lekin usko value assign nahi hoti hai.
+</script>
+
+
+//***************************** 49 **************************************** */
+<script>
+	// console.log([[[[]]]]);
+	// // opt:- nested array return karega "
+</script>
+
+
+
+//***************************** 50 **************************************** */
+<script>
+	// // How to find OS name on system
+	// // ans --> on browser console type "navigator.platform" we will get os name;
+
+	// console.log(navigator.platform);
+	// // 'Linux x86_64'
+
+</script>
+
+
+//***************************** 51 **************************************** */
+<script>
+	// let for = 200;
+	// console.log(for);
+
+	// // opt- yaha pe ye error show karega because for ek javascript reserve keyword hai.
+</script>
+
+//***************************** 52 **************************************** */
+<script>
+	// function fruit() {
+	// 	console.log(name);
+	// 	console.log(price);
+
+	// 	var name = "apple";
+	// 	let price = 50;
+	// }
+	// fruit();
+
+	// // opt:-
+	// // console.log(name); ---> yaha undefind hoga (hoesting concept)
+	// // console.log(price); ---> yaha pe error aayega using before initialization.
+
+</script>
+
+
+
+//***************************** 53 **************************************** */
+<script>
+	//using var keyword
+	// for (var i = 0; i < 3; i++) {
+	// 	setTimeout(() => console.log(i), 1)
+	// }
+
+	// // opt:- (3)  3
+	// // three times loop chalne wala hai jab bhi i ki value 3 hogi to setTimeout function run kar jayega jisme i ki value 3 hogi .
+</script>
+
+
+//***************************** 54 **************************************** */
+<script>
+	// // using let keyword
+	// for (let i = 0; i < 3; i++) {
+	// 	setTimeout(() => console.log(i), 1)
+	// }
+
+	// // opt:- 0 1 2
+	// // ab yaha pe settimeout ki value har bar different hogi because of let keyword. aur loop <3 matlab 2 tak hi jayega isliye jab setTimeout call hoga to ye 0 1 2 return karega .
+</script>
+
+//***************************** 55 **************************************** */
+<script>
+	// console.log(+true); // kisi bhi string ya boolean value ke prefix me " + " use karne se vah number me convert ho jata hai aur uska type bhi number ho jata hai;
+	// console.log(typeof +true);
+	// // o/p:- 1 and number 
+</script>
+
+//***************************** 56 **************************************** */
+<script>
+	// console.log(!"anil"); // string ka opposite kuch nahi isliye boolean false
+	// console.log(typeof ("anil")); // string
+	// // o/p:- false  string
+</script>
+
+//***************************** 57 **************************************** */
+<script>
+	// let data = "size";
+	// const bird = {
+	// 	size: "small",
+	// };
+	// //---> jab bhi hume ek variable use karna hota hai kisi object ke sath to "[]" brackets ka use karna hota hai .
+	// console.log(bird[data]); // small
+	// console.log(bird["size"]); // small
+	// console.log(bird.size); // small
+	// console.log(bird.data); // undefind
+
+</script>
+
+
+
+//***************************** 58 **************************************** */
+<script>
+	// let c = { name: "dee" }
+	// let d;
+	// d = c;
+	// c.name = "singh";
+	// console.log(d.name); //--> yaha pe object "c" and "d" dono ki memory location same hai isliye hum jab bhi kisi ek object me changes karenge to vo hume dono me dekhne milenge.
+
+	// // opt:- singh
+	// // Jab kisi object ko hum kisi dusre variable me copy karte hai to object ki value copy na hokar uski memory location copy hoti hai .
+</script>
+
+
+//***************************** 59 **************************************** */
+<script>
+	// var x;
+	// var x=10;
+	// console.log(x); // 10
+</script>
+
+//***************************** 60 **************************************** */
+<script>
+	// var x;
+	// let x = 10;  // let already declare and assign hai
+	// console.log(x); //  error already declared.
+</script>
+
+
+//***************************** 61 **************************************** */
+<script>
+	// let x = 5; // number type
+	// let y = new Number(5);  // yaha constructure ban raha hai to object type hoga.
+
+	// console.log(x == y);  // true
+	// console.log(x === y); // false
+	// // x and y ki value to same hongi but unke types nahi .
+</script>
+
+//***************************** 62 **************************************** */
+<script>
+	// let name;
+	// nmae = {}; //Typo!
+
+	// console.log(name);
+	// //opt: undefind ,because variable name to declare kiya hai but assign nahi kiya hai .
+</script>
+
+
+//***************************** 63 **************************************** */
+<script>
+	// function fruit() {
+	// 	console.log("woof");
+	// }
+
+	// fruit.name = "apple"
+	// // opt: yaha pe kuch bhi return nahi karega jaisa fucntion chal raha tha vaise hi chalega .
+
+</script>
+
+//***************************** 64 **************************************** */
+<script>
+	// function sum(a, b) {
+	// 	return a + b;
+	// }
+
+	// console.log(sum(1, "3"));
+	// // opt:- 13   , as a string ye concatenate ho jayega . 
+</script>
+
+
+//***************************** 65 **************************************** */
+<script>
+	// let number = 0;
+	// console.log(number++); // 0 , pahle number print ho jayega  fir post increment chal raha hai.
+	// console.log(++number);// jab yaha value pahuchegi to by post increment 0 se 1 ho jayega then hum yaha preincrement laga rahe hai to ye 1 value ko 2 kar dega
+	// console.log(number); // jab value uper 2 ho chuki hai to ye sirf log kar dega
+
+	// // ans:-  0 2 2
+</script>
+
+
+//***************************** 66 **************************************** */
+<script>
+	// function getAge(...args) {
+	// 	console.log(typeof args);  // yaha value  as array hogi but iska dataType object hoga because  javascript me array dataType hota hi nahi hai.
+	// }
+	// getAge(22);
+
+	// // o/p:  object
+</script>
+
+//***************************** 67 **************************************** */
+<script>
+	// function getAge() {
+	// 	'use strict';  // this will check strictly
+	// 	age = 22;
+	// 	console.log(age);
+	// }
+	// getAge(22);
+	// // o/p: error ,  because ' use strict' will check strictly type declaration and all thinks;
+</script>
+
+//***************************** 68 **************************************** */
+<script>
+	// const sum = eval('"10"*10+5') // eval paranthesis ke sabhi values ko expression me convert karke calculate kar deta hai.
+	// console.log(sum);
+	// // opt:- 105
+</script>
+
+
+//***************************** 69 **************************************** */
+<script>
+	// // how long is cool_secret accessible?
+
+	// sessionStorage.setItem('cool_secret', 123);
+	// // hum jab browser tab close karenge to sessionStorage bhi delete ho jayenge ya fir manualy bhi kar sakte hai .
+</script>
+
+//***************************** 70 **************************************** */
+<script>
+	// const obj = { 1: "a", 2: "b", 3: "c" };
+	// console.log(obj.hasOwnProperty("1"));
+	// console.log(obj.hasOwnProperty(1));
+
+	// // opt:-  true true
+	// //--> just because hum object key and values me number use kar sakte hai but variable number ke through nahi bana sakte hai.
+</script>
+
+//***************************** 71 **************************************** */
+<script>
+	// const obj = { a: "one", b: "two", a: "repete" } // repete wala overwrite kar dega one wale value ko.
+	// console.log(obj);
+
+	// // opt:-  {a: 'repete', b: 'two'}
+	// // the second property with the key "a" will overwrite the first one, as object keys must be unique.
+</script>
+
+
+//***************************** 72 **************************************** */
+<script>
+	// for (let i = 1; i < 5; i++) {
+	// 	if (i === 3) continue;
+	// 	console.log(i);
+	// }
+
+	// // opt:-  1 2 4
+	// // i ki value 3 hone pe continue statement us loop ko skip kar dega . 
+
+</script>
+
+
+//***************************** 73 **************************************** */
+<script>
+	// const foo = () => console.log("First");
+	// const bar = () => setTimeout(() => console.log("second"));
+	// const baz = () => console.log("Third");
+
+	// bar();
+	// foo();
+	// baz();
+	// // pahle excution "bar()"  me aayega fir usko settimeout mil gya to usko call stack me bhej dega fir "foo()" ko excute kar dega uske baad "baz()" ko then last me "bar()" ko excute karega .
+</script>
+
+
+//***************************** 74 **************************************** */
+<script>
+	// <div>
+	// 	<div onclick="console.log(' first div')" >
+	// 		<div onclick="console.log(' second div')">
+	// 			<button onclick="console.log(' button ')">
+	// 				Click
+	// 			</button>
+	// 		</div>
+	// 	</div >
+	// </div>
+
+	// // opt:- pahle button then second and last first div will come.
+</script>
+
+
+//***************************** 75 **************************************** */
+<script>
+	// const person = { name: 'Dev' };
+
+	// function syaHello(age) {
+	// 	return `${this.name} is ${age}`;
+	// }
+
+
+	// console.log(syaHello.call(person, 24)); //Dev is 24 --> call directly function ko call kar dega .
+	// console.log(syaHello.bind(person, 24));
+
+	// // bind ek function return karega value add karke fir use manually call karna padega .
+	// /* syaHello(age) {
+	//    return `${this.name} is ${age}`;
+	// } */
+
+</script>
+
+
+//***************************** 76 **************************************** */
+<script>
+	// function sayhi() {
+	// 	return (() => 0)(); // yaha se 0 return hoga
+	// }
+	// // Inside function se agar 0 return ho raha hai to outside me bhi 0 hi return hoga aur 0 ek number type value hai.
+	// console.log(sayhi()); // 0
+	// console.log(typeof sayhi()); // number
+</script>
+
+
+//***************************** 77 **************************************** */
+<script>
+	// function sayHi() {
+	// 	return () => 0;
+	// }
+
+	// console.log(sayHi()); // ()=> 0
+	// console.log(typeof sayHi()); // function
+	// console.log(typeof sayHi()()); // number
+</script>
+
+
+//***************************** 78 **************************************** */
+<script>
+	// console.log(typeof 1); // number
+	// // ye kuch aisa ban raha hai:- console.log( typeof number);
+	// console.log(typeof typeof 1); // string 
+</script>
+
+
+//***************************** 79 **************************************** */
+<script>
+	// const numbers = [1, 2, 3];
+	// numbers[6] = 11;
+	// console.log(numbers);
+
+	// //opt:- [1, 2, 3, empty x3, 11]
+</script>
+
+//***************************** 80 **************************************** */
+<script>
+	// const numbers = [1, 2, 3];
+	// numbers[9] = numbers;
+
+	// console.log(numbers);
+
+	// //opt:- (10) [1, 2, 3, empty × 6, Array(10)]
+	// // array ke sath me ek sub array bhi re
+</script>
+
+//***************************** 81 **************************************** */
+<script>
+	//---> Everything in javascript is either a .....?
+
+	// 1.primitive or object
+	// 2.function or onject
+	// 3.only object
+	// 4.number or object
+
+	//ans:-  primitive or object 
+</script>
+
+//***************************** 82 **************************************** */
+<script>
+	// console.log(!!null); // false
+	// console.log(!!""); // false
+	// console.log(!!1); // true
+</script>
+
+//***************************** 83 **************************************** */
+<script>
+	// console.log(setInterval(() => console.log("hi"), 1000));
+	// console.log(setInterval(() => console.log("hello"), 1000));
+	// console.log(setInterval(() => console.log("how"), 1000));
+
+	// // setinterval ek unique id dega her function ke liye jiske through hum usko stop bhi kar sakte hai .
+</script>
+
+//***************************** 84 **************************************** */
+<script>
+	console.log(..."devesh"); // d e v e s h
+	// string me spread oprator lagane pe vo array ban jati hai . 
+</script>
+
+
+//***************************** 85 **************************************** */
+<script>
+
+
+</script>

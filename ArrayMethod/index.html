@@ -1,0 +1,74 @@
+//----- Find the minimum number element from an array.
+<script>
+	// const arr = [3, 5, 6, 45, 99, 32, 12, 4]
+
+	// const getSmallestNum = (arr) => {
+	// 	return arr.reduce((accume, num) => Math.min(accume, num))
+	// }
+	// console.log(getSmallestNum(arr))
+
+	// //------ easiest way to find min and max number
+	// const min = Math.min(...arr)
+	// console.log(min);
+	// console.log(Math.max(...arr));
+
+</script>
+
+
+//----- Find the maximum number element from an array.
+<script>
+
+	// function getlargestNumber(arr) {
+	// 	return arr.reduce((accume, num) => Math.max(accume, num))
+	// }
+	// console.log(getlargestNumber(arr));
+</script>
+
+
+
+//----- Find the Sum of all number of an array.
+<script>
+	// //---- sum using forEach loop.
+	// let sum = 0;
+	// arr.forEach((elem) => {
+	// 	// sum = sum + elem;
+	// 	sum += elem
+	// })
+	// console.log(sum);
+
+	// // same work in one line with reduce most recommanded
+	// console.log(arr.reduce((acc, val) => acc + val, 0));
+
+	// // third way to do sum of all array element using eval;\
+
+	// const sum3 = eval(arr.join("+"));
+	// console.log(sum3);
+
+
+</script>
+
+// five way to add elem in an array in javascript;
+<script>
+	// const arr = [3, 5, 6, 45, 99, 32, 12, 4]
+
+	// // push();
+	// arr.push(8, 2)
+	// console.log(arr); // (10) [3, 5, 6, 45, 99, 32, 12, 4, 8, 2]
+
+	// // unshift()  --> this will add element in prefix
+	// arr.unshift(7)
+	// console.log(arr); // (11) [7, 3, 5, 6, 45, 99, 32, 12, 4, 8, 2]
+
+	// // splice() --> perticular array index ke sath element add karna
+	// arr.splice(1, 0, "Ram") // first is index value ,second is index number skipped and finaly the new value to add .
+	// console.log(arr); //  (12) [7, 'Ram', 3, 5, 6, 45, 99, 32, 12, 4, 8, 2]
+
+
+	// // other 2 are addition of 2 different array ;
+	// const arr3 = [3, 5, 6, 45, 99, 32, 12, 4]
+	// const arr4 = [7, 1, 2]
+
+	// const arrSum = [...arr3, ...arr4]
+	// console.log(arrSum);
+
+</script>

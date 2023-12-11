@@ -858,13 +858,204 @@
 
 //***************************** 84 **************************************** */
 <script>
-	console.log(..."devesh"); // d e v e s h
+	// console.log(..."devesh"); // d e v e s h
 	// string me spread oprator lagane pe vo array ban jati hai . 
 </script>
 
 
 //***************************** 85 **************************************** */
 <script>
+	// const firstPromise = new Promise((res, rej) => {
+	// 	setTimeout(res, 500, 'one');
+	// });
+
+	// const secondPromise = new Promise((res, rej) => {
+	// 	setTimeout(res, 100, 'two');
+	// });
+
+	// Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+	// // opt: two , because hum jab promise me race use karte hai to vo jo pahle resolve hoga usko return karega ,aur yaha dono function me setTimeout laga hua hai jisme 2nd me time 1000 hai to vo pahle excute hoga aur pahle promise ko resolve karega.
+</script>
+
+
+//***************************** 86 **************************************** */
+<script>
+	// let person = { name: "petro" };
+	// const members = [person];
+	// person = null;
+	// console.log(members);
+
+	// //opt:- [{…}]
+	// // because hum yah ek object ko ek new object me assign kar rahe hai aur fir pahle wale object jo null kar de raheb hai  to assign karte waqt dono object ki memory location different hogi isliye uski value hume return hogi .
+</script>
+
+
+//***************************** 87 **************************************** */
+<script>
+
+	// const person = {
+	// 	name: "dee",
+	// 	age: 22,
+	// };
+
+	// for (const item in person) {
+	// 	console.log(item);
+	// }
+
+	// // opt:- name age
+	// // jab bhi hum for in loop use karte hai to hume object ki keys milti hai;
+
+</script>
+
+
+
+//***************************** 88 **************************************** */
+<script>
+	// let data = 3 + 4 + '5';
+	// console.log(data);// 75
+	// console.log(typeof data); // string
+	// //opration kuch aise ho raha hai  7+'5' = 75
+	// // because ja bhi kisi number ko string se add karte hai to  vo number ki value ko string me convert karke concatenate kar deta hai .
+
+</script>
+
+//***************************** 89 **************************************** */
+<script>
+	// console.log( typeof 3 + 4 + '5');
+	//opt: number45
+	//beacuse  sabse pahle ye typeof 3 check karega jo ki number hai aur fir 4 '5' ko add kar dega as string .
+</script>
+
+
+//***************************** 90 **************************************** */
+<script>
+
+	// console.log(typeof (3 + 4 + +'5'));  // number
+	// console.log((3 + 4 + +'5'));  // 12
+	// //opt: typeof ke baad hum parenthesis use kar rahe hai to uski priority jyada ho jayegi isliye sabse pahle addition hoga like (3+4+5) yaha pe string "5 " bhi number ban chuka hai because kisi string value ke samne "+" sign use karne se vo number me convert ho jati hai ;
+</script>
+
+//***************************** 91 **************************************** */
+<script>
+
+	// console.log([] === []); //false
+	// // jab do array compare hota hai to har aaray ka memory location different hota hai isliye unka value hamesha false hi aayega .
+
+</script>
+
+//***************************** 92 **************************************** */
+<script>
+
+	// let data = [1, 2, 3].map(num => {
+	// 	if (typeof num === 'number') return; // bvalue not returning.
+	// 	return num * 2
+	// });
+	// console.log(data);
+
+	// //opt:- (3) [undefined, undefined, undefined]
+	// // --> type check hone ke baad hum direct return kar rahe hai but return me koi value nahi hai isliye 3times  undefind aayega.
+</script>
+
+//***************************** 93 **************************************** */
+<script>
+	// function getInfo(member) {
+	// 	member.name = "dee";
+	// }
+	// const person = { name: "ram" };
+	// getInfo(person);
+	// console.log(person);
+
+	// //opt:- dee
+	// // jab bhi hum javascript me function ke ander as a argumemt koi object pass karte hai to vo as call by reference kaam karta hai . to getinfo(person) me person parameter pass karne pe person object ki memory location vaha jayegi;
+</script>
+
+//***************************** 94 **************************************** */
+<script>
+
+	// function Car() {
+	// 	this.make = 'tata';
+	// 	return { make: 'kia' }; //  overide kar dega "tata"  wale properties ko because hum return statement use kar rahe hai.
+	// }
+
+	// const myCar = new Car();
+	// console.log(myCar.make);
+	// // opt:-  kia
+</script>
+
+
+//***************************** 95 **************************************** */
+<script>
+
+	// (() => {
+	// 	let x = (y = 10);
+	// })();
+
+	// console.log(typeof x);
+	// // opt:- undefind
+	// // because let has no access out of function due to block scope .
+
+</script>
+
+//***************************** 96 **************************************** */
+<script>
+	// (() => {
+	// 	let x = y = 10;
+	// 	// ye kuch iss tarah se work kar raha hai .
+	// 	// let x = 10; // block scope
+	// 	// y = 10; // global scope like var beacuse we have not mentioned declaration of "y";
+
+	// })();
+	// console.log(typeof y);
+
+	// // opt:- num
+
+</script>
+
+//***************************** 97 **************************************** */
+<script>
+
+	// (() => {
+	// 	let x = 10;
+	// })();
+
+	// (() => {
+	// 	let x = 10;
+	// })()
+
+	// console.log(typeof x);
+	// //opt: undefind. due to block scope
+</script>
+
+
+//***************************** 98 **************************************** */
+<script>
+
+	// (() => {
+	// 	let x = y = 10;
+	// })();
+
+	// (() => {
+	// 	let x = y = 10; // behave like below.
+	// 	// let x = 10;
+	// 	// y = 10;
+	// })()
+
+	// console.log(typeof y);
+	// //opt: number
+</script>
+
+
+//***************************** 99 **************************************** */
+<script>
+
+	// let x = 100; // this will going to print;
+	// (() => {
+	// 	var x = 20; // act like global variable
+	// })();
+	// console.log(x);
+
+	// //opt:- 100
+	// // function me ek global varible hai lekin jab hum koi variable same name se bahar bhi declare kar dete hai to vo global ko override kar deta hai .
 
 
 </script>
